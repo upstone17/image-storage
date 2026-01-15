@@ -4,27 +4,37 @@
     "questions": [
       {
         "id": 1,
-        "topic": "オーダー記法",
-        "question": "以下の計算時間（入力サイズはN）をランダウのO記法を用いて示してください。笑笑",
-        "options": ["A) O(N<sup>2</sup>)", "B) O(N√N)", "C) O(N<sup>2</sup>+N√N)", "D) O(N)"],
-        "correct_answer": "A",
-        "explanation": "正解は O(N<sup>2</sup>) だよ！🎉 N√N は N<sup>1.5</sup> だから N<sup>2</sup> の方が次数が高くて、一番大きい項だけ残すルールでこれが答えになるんだ✨",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/02-03.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/02-07.png?raw=true"
+        "topic": "配列操作",
+        "question": "配列｛A,B,C,D,E｝の2番目(インデックス1)に「x」を挿入する場合、何個の要素を移動させる必要があるか？",
+        "options": ["A) 1個", "B) 2個", "C) 3個", "D) 4個"],
+        "correct_answer": "D",
+        "explanation": "正解は「4個」だよ！🎉インデックス1（左から2番目の位置）に要素を挿入すると、後ろにある B・C・D・E の4個を右にずらす必要があるからなんだ✨️",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/11-01.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/11-02.jpg?raw=true"
       },
       {
         "id": 2,
-        "topic": "ソート",
-        "question": "マージソートの時間計算量として正しいものはどれか。",
-        "options": ["A) 平均O(N<sup>2</sup>)、最悪O(N<sup>2</sup>)", "B) 平均O(NlogN)、最悪O(N<sup>2</sup>)", "C) 平均O(NlogN)、最悪O(NlogN)", "D) 平均O(N)、最悪O(NlogN"],
-        "correct_answer": "C",
-        "explanation": "正解は「平均・最悪ともにO(N log N)」だよ！🎉 マージソートはどんなデータでも必ず半分ずつ分割するから、最悪のケースでも計算時間が遅くならないのが最強の武器なんだ！",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/05-02.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/05-06.png?raw=true"
+        "topic": "連結リストの操作",
+        "question": "連結リスト A → B → C → NULL がある。「B」の直後に「X」を挿入する場合、変更するポインタは何個か",
+        "options": ["A) 1個", "B) 2個", "C) 3個", "D) 4個"],
+        "correct_answer": "B",
+        "explanation": "正解は「2個」だよ！🎉BとCの間にXを挿入する場合、XのnextをCに向けてから、BのnextをXに変更するだけで済むんだ✨連結リストは要素を動かさずポインタをつなぎ替えるだけでできるよ！",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/11-03.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/11-04.jpg?raw=true"
+      },
+      {
+        "id": 3,
+        "topic": "ハッシュテーブルの衝突",
+        "question": "以下のハッシュ関数を使う：「文字列の最初の文字のアルファベット順（a=1, b=2, …）を5で割った余り」。AliceとFrankのハッシュ値は？",
+        "options": ["A) Alice:0, Frank:1", "B) Alice:1, Frank:1", "C) Alice:1, Frank: 6", "D) Alice:2, Frank6"],
+        "correct_answer": "B",
+        "explanation": "正解は「Alice:1、Frank:1」だよ！🎉Aliceは1番目だから 1 % 5 = 1、Frankは6番目だから 6 % 5 = 1 になって、同じハッシュ値になるんだ✨",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/11-05.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/11-06.jpg?raw=true"
       }
-
     ]
   }
 
 }
+
 
