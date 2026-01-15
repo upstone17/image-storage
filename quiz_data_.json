@@ -21,88 +21,10 @@
         "explanation": "正解は「平均・最悪ともにO(N log N)」だよ！🎉 マージソートはどんなデータでも必ず半分ずつ分割するから、最悪のケースでも計算時間が遅くならないのが最強の武器なんだ！",
         "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/05-02.png?raw=true",
         "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/05-06.png?raw=true"
-      },
-      {
-        "id": 3,
-        "topic": "計算量",
-        "question": "n個の要素から２個を選ぶすべての組み合わせを求める場合の計算量はどれか。",
-        "options": ["A) O(n)", "B) O(N<sup>2</sup>)", "C) O(n logn)", "D) 2<sup>n</sup>"],
-        "correct_answer": "B",
-        "explanation": "正解は O(n<sup>2</sup>) だよ！🎉n個から2個選ぶのは、この前一緒にやった「ペア全探索」と同じ考え方だね！💡二重ループを使うから、計算回数は大体 n<sup>2</sup>/2 回くらいになるんだけど、O記法には「係数を無視する！」っていう大事なルールがあるから、答えは O(n<sup>2</sup>) になるんだよ！",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/03-01.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/03-06.png?raw=true"
-      },
-      {
-        "id": 4,
-        "topic": "全探索",
-        "question": "全探索で問題を解く場合の特徴として最も適切なものはどれか。",
-        "options": ["A) 常に最短時間で解が求まる", "B) 解の存在が保証されていない場合には使用できない", "C) 必ず最適解を見つけることができる", "D) メモリ使用量が最小になる"],
-        "correct_answer": "C",
-        "explanation": "正解は「必ず最適解を見つけることができる」だよ！🎉 全探索は名前の通り「すべての可能性を全部調べる」方法だから、もし答えが存在するなら、絶対に一番良い答え（最適解）を見つけ出せるんだ！✨ 時間はかかっちゃうこともあるけど、見逃しがないのが最強のメリットだね！💪 ",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/03-02.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/03-07.png?raw=true"
-      },
-      {
-        "id": 5,
-        "topic": "再帰関数",
-        "question": "再帰関数の実装に必須の要素として最も適切なものはどれか。",
-        "options": ["A) ループと条件分岐", "B) ベースケースと再帰ケース", "C) 配列とポインタ", "D) グローバル変数とローカル変数"],
-        "correct_answer": "B",
-        "explanation": "正解は「ベースケースと再帰ケース」だよ！🎉 再帰関数を作る時は、終わらせるための「ベースケース（終了条件）」と、自分自身を呼び出す「再帰ケース」の2つが絶対にセットで必要なんだ！ これを忘れると永遠に止まらない無限ループ地獄になっちゃうから注意してね！💦 ",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/04-01.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/04-07.png?raw=true"
-      },
-      {
-        "id": 6,
-        "topic": "再帰関数",
-        "question": "次の再帰関数GCD(48, 18)の実行結果はどれか。",
-        "options": ["A) 3", "B) 6", "C) 12", "D) 18"],
-        "correct_answer": "B",
-        "explanation": "正解は「6」だよ！🎉 GCD(48, 18)からスタートして、余りを計算しながら GCD(18, 12) → GCD(12, 6) → GCD(6, 0) って進んでいくんだ！ 最後に余りが0になった時の「6」が最大公約数になるんだよ！💡",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/04-02.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/04-08.png?raw=true"
-      },
-      {
-        "id": 7,
-        "topic": "二分探索",
-        "question": "1000個のソート済み配列から特定の値を二分探索で見つける場合、最大何回の比較が必要か。",
-        "options": ["A) 10回", "B) 500回", "C) 1000回", "D) log<sub>2</sub>1000≈10回"],
-        "correct_answer": "D",
-        "explanation": "正解は「log₂1000 ≈ 10回」だよ！🎉 二分探索は毎回データを半分に絞り込むから、1000個あってもたった10回調べるだけで見つかっちゃうんだ！😲",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/06-03.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/06-07.png?raw=true"
-      },
-      {
-        "id": 8,
-        "topic": "貪欲法",
-        "question": "区間スケジューリング問題で貪欲法を適用する場合、なぜ「終了時刻が最も早い区間」を選ぶのが正解なのでしょうか。",
-        "options": ["A) 開始時刻が早いほうが多くの仕事ができるから", "B) 終了時刻が早いと残り時間が多く、他の仕事を選べる可能性が高まるから", "C) 区間の長さが短いほうが効率的だから", "D) プログラムの実装が簡単になるから"],
-        "correct_answer": "B",
-        "explanation": "正解は「終了時刻が早いと残り時間が多く、他の仕事を選べる可能性が高まるから」だよ！🎉 早く終わる仕事を優先すれば、その後の時間をたっぷり確保できるから、結果的にたくさんの仕事をこなせるんだ！✨ ",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/07-03.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/07-04.png?raw=true"
-      },
-      {
-        "id": 9,
-        "topic": "動的計画法",
-        "question": "Frog問題で、dp[i]を計算する際に参照する要素はどれでしょうか。",
-        "options": ["A) dp[i-1]のみ", "B) dp[i-2]のみ", "C) dp[i-1]とdp[i-2]", "D) dp[0]からdp[i-1]まで"],
-        "correct_answer": "C",
-        "explanation": "正解は「dp[i-1]とdp[i-2]」だよ！🎉🐸 フロッグ問題では、カエルは1歩か2歩しかジャンプできないから、頂点iにたどり着くには直前のi-1とi-2のどちらかの最小コストが必要になるんだ！💡",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/08-05.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/08-06.png?raw=true"
-      },
-      {
-        "id": 10,
-        "topic": "動的計画法",
-        "question": "ナップサック問題の動的計画法でdp[0][w](品物を一つも選んでいない状態)の初期値として正しいものはどれか。",
-        "options": ["A) すべて1", "B) すべて0", "C) すべて-1", "D) wの値そのもの"],
-        "correct_answer": "B",
-        "explanation": "正解は「すべて0」だよ！🎉 dp[0][w]は「0個の品物から選んだときの最大価値」を表すから、品物を1つも選んでない時点では価値の合計は当然0になるんだ！ 最初の土台作り（初期条件）がDPでは超重要だよ！✨",
-        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/09-03.png?raw=true",
-        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image/09-04.png?raw=true"
       }
+
     ]
   }
 
 }
+
