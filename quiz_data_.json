@@ -41,12 +41,73 @@
         "explanation": "正解は 「9」だよ！🎉最後にpushした9がスタックの一番上にあるから、その後のpopで9が取り出されるんだ✨スタックは「後入れ先出し（LIFO）」で、最後に入れたものが最初に出てくるのがポイントだよ🙌",
         "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/12-01.jpg?raw=true",
         "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/12-02.jpg?raw=true"
+      },
+      {
+        "id": 5,
+        "topic": "キューの動作",
+        "question": "キューに対して以下の操作を順に行ったとき、最後のdequeue()で取り出される値は?",
+        "options": ["A) 3", "B) 5", "C) 7", "D) 9"],
+        "correct_answer": "C",
+        "explanation": "正解は「7」だよ！🎉3と5を取り出した（dequeue）後、その時点で一番古くなった7が先頭から出てくるんだ✨キューは「先入れ先出し（FIFO）」で、先に入れたものから順番に出てくるのがポイントだよ💪",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/12-03.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/12-04.jpg?raw=true"
+      },
+      {
+        "id": 6,
+        "topic": "データ構造の選択",
+        "question": "以下の場面で適切なデータ構造はどれか?「テキストエディタで入力した文字を『取り消し(Undo)』する機能を実装したい」",
+        "options": ["A) 配列", "B) 連結リスト", "C) スタック", "D) キュー"],
+        "correct_answer": "C",
+        "explanation": "正解は「スタック」だよ！🎉「最後に行った操作を最初に取り消す」は、まさに LIFO（後入れ先出し）の動きそのものなんだ✨",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/12-05.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/12-06.jpg?raw=true"
+      },
+      {
+        "id": 7,
+        "topic": "DFSの動作理解",
+        "question": "以下のグラフで頂点0からDFSを開始した場合、最初に訪問される順序として正しいものはどれか?",
+        "options": ["A) 0,1,2,3,4", "B) 0,1,3,4,2", "C) 0,2,1,3,4", "D) 0,1,4,3,2"],
+        "correct_answer": "B",
+        "explanation": "正解は「0, 1, 3, 4, 2」だよ！🎉頂点0から隣の1へ、さらに深く3,4へと突き進んで、行き止まりになったら戻って残りの2を訪ねるんだ👀",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-01.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-02.jpg?raw=true"
+      },
+      {
+        "id": 8,
+        "topic": "DFSとスタックの関係性",
+        "question": "DFSでスタック（LIFO）を使う理由として最も適切なものはどれか?",
+        "options": ["A) メモリ使用量を最小化するため", "B) 最も新しく発見した頂点を先に探索するため", "C) 最短経路を保証するため", "D) 並列処理を可能にするため"],
+        "correct_answer": "B",
+        "explanation": "正解は「最も新しく発見した頂点を先に探索するため」だよ！🎉スタックの性質が、新しく見つけた場所を優先して探索する「DFS」の動作を実現してくれるんだ🌟",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-03.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-04.jpg?raw=true"
+      },
+      {
+        "id": 9,
+        "topic": "BFSの特性理解",
+        "question": "BFSが最短経路を保証できる条件として正しいものはどれか?",
+        "options": ["A) 辺に重みがある場合でも常に最短経路を保証する", "B) 無向グラフでのみ最短経路を保証する", "C) 辺の重みが全て等しい（または重みなし）グラフで最短経路を保証する", "D) 連結グラフでのみ最短経路を保証する"],
+        "correct_answer": "C",
+        "explanation": "正解は「辺の重みが全て等しい（または重みなし）グラフで最短経路を保証する」だよ！🎉BFS は各辺のコストを1として均等に広がりながら探すから、重みがない場合は最初に見つけたのが最短になるんだ🎊",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-05.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-06.jpg?raw=true"
+      },
+      {
+        "id": 10,
+        "topic": "DFSとBFSの使い分け",
+        "question": "次の問題に最適な探索アルゴリズムはどれか?「SNSで、ある人から3ホップ以内（友達の友達の友達まで）で繋がる人を全て列挙したい」",
+        "options": ["A) DFS-深く探索して効率的に見つける", "B) BFS-距離順に探索して3ホップ以内を正確に把握", "C) どちらでも同じ結果が得られる", "D) グラフ探索では解けない問題"],
+        "correct_answer": "B",
+        "explanation": "正解は「BFS-距離順に探索して3ホップ以内を正確に把握」だよ！🎉BFSは開始点からの距離（ホップ数）順に頂点を訪ねるから、距離制限がある問題を解くのに最適なんだ🫰",
+        "image_url": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-07.jpg?raw=true",
+        "explanation_image": "https://github.com/upstone17/algorithm_question_image/blob/main/quiz_image_2/14-08.jpg?raw=true"
       }
       
     ]
   }
 
 }
+
 
 
 
